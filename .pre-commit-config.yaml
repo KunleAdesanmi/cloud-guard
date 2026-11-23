@@ -1,0 +1,14 @@
+# Each item under "repos" is a source of checks (hooks).
+repos:
+  # gitleaks: scans staged changes for secrets (AWS keys, tokens, private keys...)
+  - repo: https://github.com/gitleaks/gitleaks   # where the hook's code lives
+    rev: v8.30.0                                 # which version (tag) to use; updated in Step 2
+    hooks:
+      - id: gitleaks                             # which hook from that repo to run
+
+  # ruff: Python linter (finds bugs and bad patterns) and formatter (consistent style)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.17.6
+    hooks:
+      - id: ruff-check     # lint; reports problems, and fixes the simple ones itself
+      - id: ruff-format    # reformat Python files consistently
