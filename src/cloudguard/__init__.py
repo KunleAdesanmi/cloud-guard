@@ -1,2 +1,2 @@
 def main() -> None:
-    print("Hello from cloudguard!")
+    print("Cloudguard is ready!")
