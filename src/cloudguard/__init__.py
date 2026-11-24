@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Cloudguard is ready!")
+"""cloudguard: AWS security audit tooling."""
